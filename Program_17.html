@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dynamic content</title>
+</head>
+<body>
+    <div class="a" id="a" style="text-align: center; padding-top: 100px;">
+
+       <img src="./images/img_1.jpg" alt="image" style="width: 500px; height: auto;" id="image">  <br> <br>
+       <h1 id="text1">Lorem ipsum 1 </h1>
+       <h1 id="text2" style="display: none;">Lorem ipsum 2 </h1>
+       
+    </div>
+    <script>
+        document.getElementById("a").addEventListener("mouseover",ab);
+        document.getElementById("a").addEventListener("mouseout",bc);
+
+        function ab(){
+            document.getElementById("image").src="./images/img_2.jpg";
+            document.getElementById("text1").style.display="none";
+            document.getElementById("text2").style.display="block";
+        }
+        function bc(){
+            document.getElementById("image").src="./images/img_1.jpg";
+            document.getElementById("text1").style.display="block";
+            document.getElementById("text2").style.display="none";
+        }
+
+    </script>
+</body>
+</html>
